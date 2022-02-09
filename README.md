@@ -1,2 +1,2 @@
 # React-Projects
-Some Projects to better understand the React Library.
+This repository is made with the purpose of training on JavaScript and React simultaneously.
