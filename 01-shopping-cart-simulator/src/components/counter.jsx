@@ -17,8 +17,7 @@ class Counter extends Component {
     }
 
     handleIncrementClick = () => {
-        this.state.count++;
-        console.log(this.state.count);
+        this.setState({ count: this.state.count +1 });
     };
 
     renderTags() {
