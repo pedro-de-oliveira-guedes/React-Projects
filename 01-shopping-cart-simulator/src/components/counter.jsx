@@ -8,25 +8,16 @@ class Counter extends Component {
 
     render() {
         return (
-        <React.Fragment>
+        <div>
             <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
             <button onClick={this.handleIncrementClick} className='btn btn-secondary btn-sm'>Increment</button>
-            { this.renderTags() }
-        </React.Fragment>
+        </div>
         );
     }
 
     handleIncrementClick = () => {
         this.setState({ count: this.state.count +1 });
     };
-
-    renderTags() {
-        if (!this.state.tags) {
-            return <p>There are no Tags!</p>
-        }
-
-        return <ul> {this.state.tags.map(tag => <li key={ tag }> { tag } </li>)} </ul>
-    }
 
     getBadgeClasses() {
         let countBackground = "badge m-2 badge-";
