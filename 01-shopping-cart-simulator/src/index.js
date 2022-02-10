@@ -6,10 +6,10 @@ import reportWebVitals from './reportWebVitals';
 
 import "bootstrap/dist/css/bootstrap.css";
 
-import Counter from "./components/counter"
+import Counters from "./components/counters"
 
 ReactDOM.render(
-  <Counter />,
+  <Counters />,
   document.getElementById('root')
 );
 
