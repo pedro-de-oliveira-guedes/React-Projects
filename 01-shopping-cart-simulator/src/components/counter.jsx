@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Counter extends Component {
     render() {
         return (
-        <div>
+        <div className='d-flex align-items-center'>
             <span className={this.getBadgeClasses()}>
                 {this.formatCount()}
             </span>
@@ -22,7 +22,7 @@ class Counter extends Component {
     }
 
     getBadgeClasses() {
-        let countBackground = "badge m-2 badge-";
+        let countBackground = "counter-quantity d-flex align-items-center justify-content-center badge m-2 badge-";
         countBackground += this.props.counter.value === 0 ? "warning" : "primary";
         return countBackground;
     }

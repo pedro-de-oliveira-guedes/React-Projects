@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <NavBar totalCounters={this.state.counters.filter(c => c.value > 0).length} />
-        <main className='container'>
+        <main className='container d-flex align-items-center justify-content-center main-wrapper'>
           <Counters counters={this.state.counters}
                     onDelete={this.handleDelete}
                     onIncrement={this.handleIncrement}
