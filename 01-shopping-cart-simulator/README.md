@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Shopping Cart Simulator
+This is basically my first project with React. I never had contact with the library before, despite already having knowledge about Web Development.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The goal of this project (beyond getting to know better React) is to create a Shopping Cart of a online store.
 
-## Available Scripts
+You have a product, and you can increase it's quantity, as well as delete it from the cart. There is a NavBar displaying the number of products you have in your cart, it only counts products wich have at least one item.
 
-In the project directory, you can run:
+Below you can see a preview of what the app looks like when first opened:
 
-### `npm start`
+![Preview of the App](https://user-images.githubusercontent.com/72149404/153591913-18bc39d3-1b2d-444d-b16a-59468e280386.png "App when opened")
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+As you can see in the image below, the number of items in the right corner increses as you change the quantities of products in the cart:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Cart items quantity increasing, there is a red rectangle wrapping the number](https://user-images.githubusercontent.com/72149404/153592516-2d812249-1a48-44d0-bc6f-065dc0163283.png "Quantity of items increased in the cart count")
 
-### `npm test`
+You can also reset the cart wich makes every product have zero items:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Reseting the cart so every product has zero](https://user-images.githubusercontent.com/72149404/153593276-9813148c-2db0-4061-9894-3b86643033f2.png "Reseting the cart")
 
-### `npm run build`
+decrease the product quantity as long as it has at least one:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Decreasing the third product quantity](https://user-images.githubusercontent.com/72149404/153593073-d9594428-1442-43b6-b5da-579c825c2b42.png "Third product quantity decreased")
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+and remove a product from the cart:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Removing the third product from the cart](https://user-images.githubusercontent.com/72149404/153593923-27893ab1-f1da-4b48-af69-7039a462bf49.png "Third product is removed from the cart")
