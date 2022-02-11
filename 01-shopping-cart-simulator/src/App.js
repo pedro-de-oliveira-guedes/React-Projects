@@ -15,27 +15,37 @@ class App extends Component {
   }
 
   handleDelete = (counterId) => {
-      const counters = this.state.counters.filter(counter => counter.id !== counterId);
-      this.setState({ counters })
+    const counters = this.state.counters.filter(counter => counter.id !== counterId);
+    this.setState({ counters })
   };
 
   handleIncrement = (counter) => {
-      console.log("Let me take you on a little trip", counter);
-      const index = this.state.counters.indexOf(counter);
-      const counters = [...this.state.counters];
+    const index = this.state.counters.indexOf(counter);
+    const counters = [...this.state.counters];
 
-      counters[index] = {...counter};
-      counters[index].value++;
-      this.setState({ counters });
+    counters[index] = {...counter};
+    counters[index].value++;
+    this.setState({ counters });
   };
 
   handleReset = () => {
-      const counters = this.state.counters.map(counter => {
-          counter.value = 0;
-          return counter;
-      });
-      this.setState({ counters });
+    const counters = this.state.counters.map(counter => {
+        counter.value = 0;
+        return counter;
+    });
+    this.setState({ counters });
   };
+
+  handleDecrement = (counter) => {
+    const index = this.state.counters.indexOf(counter);
+    const counters = [...this.state.counters];
+
+    counters[index] = {...counter};
+    if (counters[index].value > 0) {
+      counters[index].value--;
+    }
+    this.setState({ counters });
+  }
   render() { 
     return (
       <React.Fragment>
@@ -44,6 +54,7 @@ class App extends Component {
           <Counters counters={this.state.counters}
                     onDelete={this.handleDelete}
                     onIncrement={this.handleIncrement}
+                    onDecrement={this.handleDecrement}
                     onReset={this.handleReset} />
         </main>
       </React.Fragment>
