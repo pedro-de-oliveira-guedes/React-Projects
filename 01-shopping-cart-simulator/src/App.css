@@ -47,3 +47,22 @@
 .main-wrapper {
 	height: 90vh;
 }
+
+.increment-btn {
+	background-color: green;
+}
+
+.decrement-btn {
+	background-color: #dc3545;
+}
+
+.remove-btn {
+	background-color: red;
+}
+
+.increment-btn,
+.decrement-btn {
+	width: 30px;
+	height: 30px;
+	margin: 5px;
+}
