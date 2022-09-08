@@ -1,5 +1,9 @@
 import "./components/UserData"
+
+import './styles/poke.css'
+
 import { DisplayName, DisplayAge, TaskList } from "./components/UserData";
+import PokeList from './components/pokemons';
 
 function App() {
   return (
@@ -10,6 +14,8 @@ function App() {
         <DisplayName name="Pedro"/>
         <DisplayAge />
         <TaskList />
+        <hr />
+        <PokeList />
     </div>
   );
 }
