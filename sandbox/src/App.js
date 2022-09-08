@@ -1,5 +1,5 @@
 import "./components/UserData"
-import DisplayName from "./components/UserData";
+import { DisplayName, DisplayAge, TaskList } from "./components/UserData";
 
 function App() {
   return (
@@ -8,6 +8,8 @@ function App() {
             Pedro?
         </h1>
         <DisplayName name="Pedro"/>
+        <DisplayAge />
+        <TaskList />
     </div>
   );
 }
