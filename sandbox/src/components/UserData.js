@@ -1,13 +1,11 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-function DisplayName(params) {
+export function DisplayName(params) {
     return (
         <div>
             <h2>
                 Welcome, {params.name}!
             </h2>
-            <DisplayAge />
-            <TaskList />
         </div>
     );
 }
@@ -15,7 +13,16 @@ function DisplayName(params) {
 export function DisplayAge(params) {
     const submitButtonStyle = { marginLeft: '15px' }
 
-    const [age, setAge] = useState("X");
+    const [age, setAge] = useState('X');
+
+    useEffect( () => {
+        const storedAge = localStorage.getItem('@age');
+        if (storedAge) setAge( JSON.parse(storedAge) );
+    }, [] );
+    
+    useEffect( () => {
+        if ( !isNaN(age) ) localStorage.setItem( '@age', JSON.stringify(age) );
+    }, [age] );
 
     function handleAgeChange(age) {
         setAge(age);
@@ -32,8 +39,6 @@ export function DisplayAge(params) {
             (Number(birthDate[1]) - today.getMonth() === 0 &&
              Number(birthDate[0]) > today.getDate()) )
             return handleAgeChange(age - 1);
-        
-        console.log(age);
 
         return handleAgeChange(age);
     }
@@ -59,10 +64,6 @@ export function DisplayAge(params) {
 
 export function TaskList(params) {
     const submitButtonStyle = { marginLeft: '15px' }
-    // const completedTaskStyle = { color: 'red',
-    //                              textDecoration: 'line-through' }
-    // const notCompletedTaskStyle = { color: 'black',
-    //                                 textDecoration: 'none'}
 
     const [newTask, setNewTask] = useState("");
     const [tasks, setTasks] = useState(["Fuck it!", "We ball!"]);
@@ -111,5 +112,3 @@ export function TaskList(params) {
         </div>
     );
 }
-
-export default DisplayName;
